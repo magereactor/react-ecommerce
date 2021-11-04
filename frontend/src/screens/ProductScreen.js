@@ -19,7 +19,7 @@ const ProductScreen = ({history, match}) => {
     const {isLoading, error, product} = productDetails
 
     const addToCartHandler = () => {
-        history.push(`/cart/${match.params.id}&qty=${qty}`)
+        history.push(`/cart/${match.params.id}?qty=${qty}`)
     }
 
     return (
