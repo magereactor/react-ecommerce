@@ -1,0 +1,31 @@
+{
+  "name": "react-ecommerce",
+  "version": "1.0.0",
+  "description": "MERN Stack ECommerce",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.0.12"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/dbseeders/userAndProductsSeeder",
+    "data:destroy": "node backend/dbseeders/userAndProductsSeeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magereactor/react-ecommerce.git"
+  },
+  "author": "Faizan Pervaiz",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.14"
+  }
+}
